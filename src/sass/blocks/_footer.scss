@@ -29,8 +29,12 @@
     }
     &__list {
         display: flex;
-        ul {
-            list-style-type: "— ";
+        justify-content: space-between;
+        :hover {
+            color: $main-color;
+        }
+        span {
+            color: $main-color;
         }
         a {
             color: #fff;
@@ -38,9 +42,14 @@
             text-transform: uppercase;
             font-size: 18px;
             font-weight: bold;
-            :hover {
-                color: $main-color;
-            }
+        }
+        &-left {
+            display: flex;
+            flex-direction: column;
+        }
+        &-right {
+            display: flex;
+            flex-direction: column;
         }
     }
     &__logo {

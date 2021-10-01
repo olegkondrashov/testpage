@@ -22,20 +22,21 @@
 
 .navigation {
     display: flex;
+    justify-content: space-between;
     margin: 18px 0 0 51px;
     &__social {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        min-width: 360px;
+        max-width: 360px;
         &-descr {
             font-weight: bold;
             font-size: 18px;
             line-height: 125%;
-            max-width: 225px;
             margin-right: 13px;
         }
         &-icons {
+            display: flex;
             :hover {
                 svg {
                     filter: invert(80%) sepia(82%) saturate(367%) hue-rotate(104deg) brightness(89%) contrast(85%);
@@ -74,18 +75,18 @@
 .nav {
     display: flex;
     margin: 18px 51px 0 0;
-    width: 40%;
+    width: 45%;
     &__list {
         display: flex;
         justify-content: space-around;
         align-items: center;
         width: 100%;
         text-align: center;
-        list-style-type: none;
         margin: 0;
         cursor: pointer;
         :hover {
             border-bottom: solid 3px $main-color;
+            color: #000;
         }
         :last-child {
             margin-right: 0;
@@ -152,12 +153,7 @@
 }
 
 .logo {
-    display: flex;
-    flex-direction: row;
-    // position: absolute;
-    // left: 50%;
-    // top: 50%;
-    // transform: translate(-50%, -50%);
+    padding-top: 20px;
     h1 {
         font-weight: bold;
         font-size: 36px;
@@ -180,11 +176,11 @@
     justify-content: center;
     align-items: center;
     max-width: 410px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 125%;
+    text-transform: uppercase;
     a{
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 125%;
-        text-transform: uppercase;
         text-decoration: none;
         color: #000;
         margin-right: 30px;

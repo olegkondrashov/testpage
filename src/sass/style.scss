@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cuprum&display=swap');
 @import 'base/variables';
-@import 'blocks/media';
 
 @font-face {
     font-family: 'Proxima Nova';
@@ -62,3 +61,4 @@ body {
 @import 'blocks/footer';
 @import 'blocks/buttons';
 @import 'blocks/modal';
+@import 'blocks/media';
