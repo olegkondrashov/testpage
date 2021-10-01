@@ -1,0 +1,27 @@
+.about {
+    margin-top: 100px;
+    &__content {
+        position: relative;
+        width: 100%;
+        min-height: 675px;
+        background: url('../img/about.jpg') no-repeat right/80%;
+    }
+    &__text {
+        position: absolute;
+        top: 100px;
+        max-width: 40%;
+        max-height: 80%;
+        overflow: hidden;
+        background-color: #fff;
+        z-index: 10;
+        padding: 50px 30px 50px 50px;
+        font-weight: bold;
+        font-size: 18px;
+        border-right: 15px solid $main-color;
+        border-radius: 4px;
+        span {
+            color: $main-color;
+            text-transform: uppercase;
+        }
+    }
+}

@@ -1,0 +1,204 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__wrapper {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        &-logo {
+            height: 105px;
+            margin: 0 51px;
+        }
+    }
+}
+
+.divider {
+    border: 1px solid #1E2E36;
+    opacity: .6;
+    margin-top: 19px;
+}
+
+.navigation {
+    display: flex;
+    margin: 18px 0 0 51px;
+    &__social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 360px;
+        &-descr {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 125%;
+            max-width: 225px;
+            margin-right: 13px;
+        }
+        &-icons {
+            :hover {
+                svg {
+                    filter: invert(80%) sepia(82%) saturate(367%) hue-rotate(104deg) brightness(89%) contrast(85%);
+                }
+            }
+        }
+    }
+    &__phone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 181px;
+        margin-left: 65px;
+        .dropdown {
+            &-toggle::after {
+                content: url('../icons/chevron-right.svg');
+                border: none;
+                margin: 5px auto 0;
+            }
+            .btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: none;
+                padding: 0;
+            }
+            a {
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 125%;
+            }
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    margin: 18px 51px 0 0;
+    width: 40%;
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        list-style-type: none;
+        margin: 0;
+        cursor: pointer;
+        :hover {
+            border-bottom: solid 3px $main-color;
+        }
+        :last-child {
+            margin-right: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+    &__item {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 125%;
+        text-transform: uppercase;
+        margin-right: 15px;
+        color: #000;
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__item {
+        position: relative;
+        a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 8px;
+        }
+        :hover {
+            background-color: $main-color;
+        }
+    }
+    &__drops {
+        display: none;
+        position: absolute;
+        left: 0;
+        font-size: 18px;
+        text-transform: uppercase;
+        background-color: $main-color;
+        z-index: 5;
+        border-radius: 4px;
+        padding: 5px;
+        :hover {
+            color: #000;
+        }
+    }
+    &__toggle {
+        cursor: pointer;
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        width: 130px;
+        padding: 0;
+    }
+    :hover {
+        .menu__drops {
+            display: flex;
+        }
+    }
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    // position: absolute;
+    // left: 50%;
+    // top: 50%;
+    // transform: translate(-50%, -50%);
+    h1 {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 125%;
+        padding-left: 15px;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #000;
+    }
+    span {
+        color: $main-color;
+    }
+}
+
+.order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 410px;
+    a{
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 125%;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #000;
+        margin-right: 30px;
+    }
+    &__btn {
+        width: 278px;
+        height: 51px;
+        background-color: $main-color;
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 125%;
+        text-transform: uppercase;
+        border-style: none;
+        border-radius: 4px;
+    }
+}

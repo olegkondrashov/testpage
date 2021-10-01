@@ -1,0 +1,53 @@
+.advantages {
+    margin-top: 100px;
+}
+
+.slider {
+    position: relative;
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        &__next {
+            right: 40px;
+        }
+        &__prev {
+            left: 40px;
+        }
+    }
+    :hover {
+        svg {
+            fill: #000;
+        }
+    }
+    &__item {
+        position: relative;
+        cursor: pointer;
+        padding: 0 10px;
+        img {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+        }
+        &-text {
+            position: absolute;
+            bottom: 0;
+            color: #fff;
+            margin: 0 60px 30px;
+        }
+        :hover {
+            .slider__descr {
+                display: block;
+            }
+        }
+    }
+    &__title {
+        width: fit-content;
+        border-bottom: 3px solid $main-color;
+    }
+    &__descr {
+        display: none;
+        margin-top: 15px;
+    }
+}

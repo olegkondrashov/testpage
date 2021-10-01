@@ -1,0 +1,114 @@
+.categories {
+    margin-top: 100px;
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 55px;
+    }
+    &__item {
+        list-style-type: none;
+        height: 140px;
+        font-weight: bold;
+        font-size: 24px;
+        text-transform: uppercase;
+        text-align: center;
+        cursor: pointer;
+        &_active {
+            svg {
+                filter: invert(69%) sepia(72%) saturate(367%) hue-rotate(104deg) brightness(88%) contrast(82%);
+            }
+            .categories__descr {
+                border-bottom: 2px solid $main-color;
+            }
+        }
+        /* :hover, :focus {
+            svg {
+                filter: invert(69%) sepia(72%) saturate(367%) hue-rotate(104deg) brightness(88%) contrast(82%);
+            }
+            .categories__descr {
+                border-bottom: 2px solid $main-color;
+            }
+        } */
+    }
+    &__descr {
+        margin-top: 10px;
+    }
+}
+
+.goods {
+    display: flex;
+    margin-top: 85px;
+    justify-content: space-around;
+    &-wrapper {
+        display: none;
+    }
+    &__item {
+        position: relative;
+        margin: 0 10px;
+        max-width: 586px;
+        img {
+            width: 100%;
+        }
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        :hover {
+            .goods__descr {
+                background-color: $main-color;
+                bottom: -30px;
+                color: #fff;
+            }
+        }
+    }
+    &__label {
+        color: #000;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        color: #fff;
+        background-color: #1E2E36;
+        height: 33px;
+        text-align: center;
+        padding: 5px 15px;
+        &-second {
+            top: 45px;
+            background-color: #FF1B1B;
+        }
+    }
+    &__descr {
+        position: absolute;
+        bottom: -50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        width: 100%;
+        color: #000;
+        font-weight: bold;
+        font-size: 24px;
+        height: 60px;
+    }
+    &__price {
+        display: flex;
+        &-new {
+            color: #FF1B1B;
+            padding-right: 10px;
+        }
+        &-old {
+            text-decoration-line: line-through;
+            font-weight: bold;
+            font-size: 18px;
+            color: #BCBDBB;
+        }
+    }
+    &__btn {
+        display: flex;
+    }
+}
+
+.active {
+    display: block;
+}

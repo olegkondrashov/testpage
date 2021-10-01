@@ -1,0 +1,19 @@
+.button {
+    height: 51px;
+    width: 209px;
+    border-style: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: $main-color;
+    margin: 30px auto 0;
+    &__goods {
+      width: 190px;
+      margin: 110px auto 0;
+    }
+    &-form {
+      width: 100%;
+    }
+  }

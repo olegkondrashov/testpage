@@ -1,0 +1,77 @@
+.main {
+    position: relative;
+    &__wrapper {
+        position: absolute;
+        top: 0;
+        left: 51px;
+        max-height: 100%;
+        max-width: 462px;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        border-left: 15px solid $main-color;
+        padding: 89px 10px 30px;
+    }
+
+    &__slider {
+        &-img {
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+        &_text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 36px;
+            &-title {
+                font-size: 64px;
+                font-weight: bold;
+                text-align: center;
+            }
+            &-subtitle {
+                font-weight: bold;
+                margin-top: 50px;
+                text-align: center;
+            }
+            &-descr {
+                margin: 0 auto;
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+
+        &-arrows {
+            display: flex;
+            padding: 0;
+            button {
+                border: none;
+                box-shadow: none;
+                background-color: transparent;
+            }
+            :hover {
+                svg {
+                    fill: #000;
+                    stroke: #fff;
+                }
+            }
+        }
+
+        &_counter {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            font-size: 24px;
+            #current {
+                font-size: 36px;
+                font-weight: bold;
+            }
+        }
+        &-prev {
+            margin-right: 8px;
+        }
+    }
+}
