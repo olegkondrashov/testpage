@@ -1,0 +1,116 @@
+.hamburger {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    height: 21px;
+    width: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    z-index: 100;
+    &_toggle {
+        width: 90%;
+        height: 3px;
+        border-radius: 10px;
+        background-color: #000;
+        transition: all .3s ease-in-out;
+    }
+    ::before, ::after {
+        content: '';
+        position: absolute;
+        width: 90%;
+        height: 3px;
+        background-color: #000;
+        border-radius: 10px;
+        transition: all .3s ease-in-out;
+    }
+    ::before {
+        transform: translateY(-7px);
+    }
+    ::after {
+        transform: translateY(7px);
+    }
+}
+.open {
+    .hamburger_toggle {
+        transform: translateX(-100%);
+        background: transparent;
+    }
+    ::before {
+        transform: rotate(45deg) translate(21px, -21px);
+    }
+    ::after {
+        transform: rotate(-45deg) translate(21px, 21px);
+    }
+}
+.mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    right: -100%;
+    z-index: 50;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .6s;
+    &.active {
+        right: 0;
+        visibility: visible;
+        opacity: 1;
+        #left {
+            margin-top: 10px;
+            transform: rotate(45deg);
+        }
+        #right {
+            margin-bottom: 10px;
+            transform: rotate(-45deg);
+        }
+    }
+    &__menu {
+        position: relative;
+        // left: -100%;
+        width: 320px;
+        background-color: $main-color;
+        height: 100%;
+        padding: 100px 0 0 40px;
+        transition: all .6s;
+    }
+    &__close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+    }
+    &__list {
+        list-style-type: none;
+        padding-left: 35px;
+    }
+    &__link {
+        position: relative;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 125%;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        &::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 7px;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #000;
+            border-radius: 50%;
+        }
+        &:hover {
+            &::before {
+                background-color: #fff;
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+}

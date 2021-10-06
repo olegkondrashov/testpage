@@ -52,6 +52,7 @@ body {
   z-index: 50;
 }
 
+
 @import 'blocks/header';
 @import 'blocks/main';
 @import 'blocks/advantages';
@@ -61,4 +62,5 @@ body {
 @import 'blocks/footer';
 @import 'blocks/buttons';
 @import 'blocks/modal';
+@import 'blocks/hamburger';
 @import 'blocks/media';

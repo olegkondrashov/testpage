@@ -1,3 +1,8 @@
+@media (min-width: 1024px) {
+    .nav {
+        display: flex;
+    }
+}
 @media (max-width: 1919px) {
     .menu {
         &__toggle {
@@ -77,6 +82,15 @@
         }
     }
     .header {
+        &__social {
+            max-width: 250px;
+            &-descr {
+                font-size: 15px;
+            }
+        }
+        &__phone {
+            margin: 20px 0 0 0;
+        }
         &__wrapper {
             &-logo {
                 justify-content: space-between;
@@ -84,28 +98,11 @@
             }
         }
     }
-    .navigation {
-        &__social {
-            max-width: 255px;
-            &-descr {
-                font-size: 15px;
-            }
-        }
-        &__phone {
-            max-width: 150px;
-            margin-left: 20px;
-            .dropdown {
-                a {
-                    font-size: 15px;
-                }
-            }
-        }
-    }
     .nav {
         margin: 18px 15px 0 0;
         &__item {
-            font-size: 14px;
-            margin-right: 12px;
+            font-size: 13px;
+            margin-right: 9px;
         }
     }
     .menu {
@@ -133,8 +130,7 @@
     }
     .order {
         font-size: 12px;
-        width: 35%;
-        justify-content: center;
+        width: 25%;
         &__cart {
             a {
                 display: flex;
@@ -230,9 +226,9 @@
             font-size: 14px;
             &-content {
                 padding: 15px 10px 15px 10px;
-                input {
-                    margin: 5px 0 0;
-                }
+            }
+            &-input {
+                margin: 4px 0 0;
             }
             &-title {
                 font-size: 28px;
@@ -278,6 +274,226 @@
         }
         &__creators {
             font-size: 12px;
+        }
+    }
+}
+@media(max-width: 1023px) {
+    .title {
+        font-size: 34px;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .catalog {
+        display: flex;
+    }
+    .header {
+        &__wrapper {
+            justify-content: start;
+            &-logo {
+                justify-content: space-between;
+            }
+        }
+        &__phone {
+            margin: 20px 0 0 90px;
+        }
+    }
+    .order {
+        width: auto;
+    }
+    .nav {
+        position: fixed;
+        width: 100%;
+        height: 10rem;
+        background-color: $main-color;
+        margin: 0;
+        padding-left: 20px;
+        z-index: 50;
+        &__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            cursor: pointer;
+            :hover {
+                border-bottom: solid 3px #000;
+                color: #000;
+            }
+            :last-child {
+                margin-right: 0;
+            }
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+    .menu {
+        display: none;
+    }
+    .main {
+        &__wrapper {
+            max-width: 250px;
+            padding: 10px 10px 10px;
+        }
+        &__slider {
+            &_text {
+                font-size: 14px;
+                &-title {
+                    font-size: 34px;
+                }
+                &-subtitle {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .slider {
+        &__title {
+            font-size: 18px;
+        }
+        &__descr {
+            font-size: 10px;
+        }
+    }
+    .categories {
+        &__item {
+            font-size: 20px;
+            svg {
+                width: 80px;
+            }
+        }
+    }
+    .goods {
+        &__descr {
+            padding: 0;
+            font-size: 14px;
+        }
+        &__price {
+            font-size: 12px;
+            &-old {
+                font-size: 10px;
+            }
+        }
+        &__label {
+            font-size: 12px;
+            padding: 2px 15px;
+        }
+    }
+    .about {
+        &__text {
+            top: 90px;
+            max-height: 60%;
+        }
+    }
+    .questions {
+        &__form {
+            top: 100px;
+            height: 55%;
+            font-size: 10px;
+            &-title {
+                font-size: 20px;
+            }
+            &-input {
+                padding: 5px;
+                height: 30px;
+                font-size: 14px;
+            }
+            &-descr {
+                margin-top: 10px;
+            }
+        }
+    }
+    .footer {
+        &__content {
+            &_left {
+                justify-content: space-between;
+            }
+        }
+        &__list {
+            flex-direction: column;
+            &-left {
+                margin-bottom: 45px;
+            }
+        }
+        &__year {
+            display: contents;
+        }
+        &__social {
+            h4 {
+                font-size: 16px;
+            }
+        }
+        &__creators {
+            font-size: 10px;
+            bottom: 32px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        &__social {
+            margin: 0;
+            svg {
+                height: 25px;
+            }
+            &-descr {
+                display: none;
+            }
+            &-icons {
+                a {
+                    padding-top: 20px;
+                }
+            }
+        }
+        &__phone {
+            margin: 20px 0 0 0;
+            min-width: auto;
+            svg {
+                height: 15px;
+            }
+            .dropdown {
+                a {
+                    font-size: 12px;
+                }
+            }
+        }
+        &__wrapper {
+            &-logo {
+                margin: 0;
+            }
+        }
+    }
+    .catalog {
+        &__btn {
+            width: max-content;
+        }
+    }
+    .logo {
+        display: none;
+        padding-top: 0;
+        img {
+            max-width: 36px;
+        }
+        h1 {
+            font-size: 14px;
+        }
+    }
+    .order {
+        &__cart {
+            a {
+                font-size: 10px;
+                img {
+                    height: 20px;
+                }
+            }
+        }
+        &__btn {
+            width: max-content;
+            font-size: 10px;
         }
     }
 }

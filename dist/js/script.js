@@ -13,12 +13,21 @@ const modal = document.querySelector('.modal'),
       modalClose = document.querySelector('.modal__close'),
       modalBtn = document.querySelector('.order__btn');
 
+
+function modalHide () {
+    modal.style.display = '';
+}
+
 modalBtn.addEventListener('click', () => {
     modal.style.display = 'block';
 });
 
-modalClose.addEventListener('click', () => {
-    modal.style.display = '';
+modalClose.addEventListener('click', () => modalHide());
+
+modal.addEventListener('touchstart', (e) => {
+    if (e.target === modal) {
+        modalHide();
+    }
 });
 
 // Slider first
@@ -98,3 +107,31 @@ $(document).ready(function(){
 
   });
   
+// Mobile menu 
+
+const hamburger = document.querySelector('.hamburger'),
+      mobileMenu = document.querySelector('.nav'),
+      mobileLink = document.querySelectorAll('.nav__item');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('show');
+});
+
+mobileLink.forEach((item) => {
+    item.addEventListener('click', () => {
+        mobileMenu.classList.remove('show');
+        hamburger.classList.remove('open');
+    });
+});
+
+// Mobile catalog 
+
+const catalog = document.querySelector('.catalog__btn'),
+      catalogItem = document.querySelectorAll('.catalog__content');
+
+catalog.addEventListener('click', () => {
+    catalogItem.forEach((item) => {
+        item.classList.toggle('show');
+    });
+});
