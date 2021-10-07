@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furniture</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/slick.min.css">
-    <link rel="stylesheet" href="/css/style.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 
@@ -201,14 +201,14 @@
             </div>
             <div class="logo">
                 <a href="#">
-                    <img src="../icons/logo.svg" alt="logo">
+                    <img src="icons/logo.svg" alt="logo">
                     <h1><span>F</span>urniture.test</h1>
                 </a>
             </div>
             <div class="order">
                 <div class="order__cart">
                     <a href="#">
-                        <img src="../icons/shopping-cart.svg" alt="shopping-cart">
+                        <img src="icons/shopping-cart.svg" alt="shopping-cart">
                         Кошик
                     </a>
                 </div>
@@ -224,16 +224,16 @@
         <div class="main__item">
             <div class="main__slider">
                 <div class="main__slider-img">
-                    <img src="/img/main_bg.jpg" alt="Ornella">
+                    <img src="img/main_bg.jpg" alt="Ornella">
                 </div>
                 <div class="main__slider-img">
-                    <img src="/img/ornela2.jpg" alt="Ornella">
+                    <img src="img/ornela2.jpg" alt="Ornella">
                 </div>
                 <div class="main__slider-img">
-                    <img src="/img/ornella3.jpg" alt="Ornella">
+                    <img src="img/ornella3.jpg" alt="Ornella">
                 </div>
                 <div class="main__slider-img">
-                    <img src="/img/ornella4.jpg" alt="Ornella">
+                    <img src="img/ornella4.jpg" alt="Ornella">
                 </div>
                 <div class="main__wrapper">
                     <div class="main__slider_text">
@@ -409,7 +409,7 @@
                             </defs>
                         </svg>
                                 
-                        <div class="categories__descr">Дивани</div>
+                        <div id="sofa" class="categories__descr">Дивани</div>
                     </div>
                 </li>
     
@@ -431,7 +431,7 @@
                             </clipPath>
                             </defs>
                             </svg>
-                        <div class="categories__descr">ліжка</div>
+                        <div id="bed" class="categories__descr">ліжка</div>
                     </div>
                 </li>
     
@@ -446,7 +446,7 @@
                             <path d="M10.9701 88.8759C9.02871 88.8782 7.33597 87.5558 6.86857 85.6715L5.70472 81.0042C5.54796 80.3764 5.93006 79.7404 6.55776 79.5836C6.65067 79.5605 6.74594 79.5487 6.84154 79.5488H15.0987C15.7458 79.5488 16.2704 80.0733 16.2704 80.7205C16.2704 80.8161 16.2588 80.9115 16.2357 81.0042L15.0716 85.6715C14.6042 87.556 12.9115 88.8782 10.9701 88.8759ZM8.34155 81.8928L9.14256 85.1044C9.39425 86.1137 10.4166 86.7279 11.4258 86.4762C12.1015 86.3076 12.6291 85.7801 12.7976 85.1044L13.5987 81.8928H8.34155Z" fill="#1E2E36"/>
                             <path d="M89.0298 88.876C87.0883 88.8783 85.3955 87.5559 84.9281 85.6716L83.7643 81.0045C83.6075 80.3766 83.9896 79.7406 84.6173 79.5839C84.7102 79.5607 84.8055 79.5489 84.9011 79.5491H93.1582C93.8053 79.5491 94.33 80.0736 94.33 80.7207C94.33 80.8163 94.3184 80.9118 94.2952 81.0045L93.1314 85.6716C92.664 87.5559 90.9712 88.8783 89.0298 88.876ZM86.4013 81.8928L87.2021 85.1043C87.4538 86.1136 88.4761 86.728 89.4854 86.4763C90.1613 86.3077 90.6888 85.7802 90.8574 85.1043L91.6582 81.8927L86.4013 81.8928Z" fill="#1E2E36"/>
                             </svg>
-                        <div class="categories__descr">Крісла</div>
+                        <div id="armchair" class="categories__descr">Крісла</div>
                     </div>
                 </li>
     
@@ -468,7 +468,7 @@
                             </clipPath>
                             </defs>
                             </svg>
-                        <div class="categories__descr">комоди</div>
+                        <div id="commode" class="categories__descr">комоди</div>
                     </div>
                 </li>
     
@@ -491,7 +491,7 @@
                             </clipPath>
                             </defs>
                             </svg>
-                        <div class="categories__descr">шафи</div>
+                        <div id="cupboard" class="categories__descr">шафи</div>
                     </div>
                 </li>
     
@@ -563,7 +563,7 @@
                             </clipPath>
                             </defs>
                             </svg>
-                        <div class="categories__descr">Кухня</div>
+                        <div id="kitchen" class="categories__descr">Кухня</div>
                     </div>
                 </li>
             </ul>
@@ -1034,17 +1034,17 @@
             <h2 class="title">Залишились питання?</h2>
         </div>
         <div class="questions__content">
-            <form class="questions__form" action="#">
-                <div class="questions__form-content">
+            <div class="questions__form">
+                <form class="questions__form-content" action="#">
                     <h3 class="questions__form-title">Замовте консультацію</h3>
-                    <input required type="text" class="questions__form-input" placeholder="Ваше ім'я">
-                    <input required type="number" class="questions__form-input" placeholder="Ваш номер телефону">
+                    <input required name="name" type="name" class="questions__form-input" placeholder="Ваше ім'я">
+                    <input required name="phone" type="phone" class="questions__form-input" placeholder="Ваш номер телефону">
                     <button class="button button-form">ВІдправити</button>
                     <p class="questions__form-descr">
                         Залиште заявку або телефонуйте за номером <br> <strong>(099) 111 22 33</strong>, і наш менеджер звяжеться з <br> вами для кваліфікованої консультації.
                     </p>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -1065,12 +1065,12 @@
             <div class="footer__content_left">
                 <div class="footer__list">
                     <div class="footer__list-left">
-                        <a href="#"><span>—</span> Дивани</a>
-                        <a href="#"> <span>—</span> ліжка</a>
-                        <a href="#"> <span>—</span> Крісла</a>
-                        <a href="#"> <span>—</span> шафи</a>
-                        <a href="#"> <span>—</span> Кухні</a>
-                        <a href="#"> <span>—</span> комоди</a>
+                        <a href="#sofa"><span>—</span> Дивани</a>
+                        <a href="#bed"> <span>—</span> ліжка</a>
+                        <a href="#armchair"> <span>—</span> Крісла</a>
+                        <a href="#cupboard"> <span>—</span> шафи</a>
+                        <a href="#kitchen"> <span>—</span> Кухні</a>
+                        <a href="#commode"> <span>—</span> комоди</a>
                     </div>
                     <div class="footer__list-right">
                         <a href="#categories"> <span>—</span> АкцІї</a>
@@ -1177,7 +1177,7 @@
                     <div class="modal__title subtitle">
                         Ми зв'яжемося з Вами якомога швидше!</div>
                     <input required name="name" type="text" placeholder="Ваше ім'я" class="modal__input">
-                    <input required id="phone" type="text" placeholder="Ваш номер телефону" class="modal__input">
+                    <input required name="phone" id="phone" type="phone" placeholder="Ваш номер телефону" class="modal__input">
                     <button class="button button__call">Передзвоніть мені</button>
                 </form>
             </div>

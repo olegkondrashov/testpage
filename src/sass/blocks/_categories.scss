@@ -90,6 +90,11 @@
         font-weight: bold;
         font-size: 24px;
         height: 60px;
+        &-touch {
+            background-color: $main-color;
+            bottom: -30px;
+            color: #fff;
+        }
     }
     &__price {
         display: flex;

@@ -89,7 +89,16 @@ $(document).ready(function(){
         slidesToShow: 3,
         slidesToScroll: 1,
         prevArrow: $('.arrow__prev'),
-        nextArrow: $('.arrow__next')
+        nextArrow: $('.arrow__next'),
+        responsive: [
+            {
+              breakpoint: 969,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
     });
 
     $('ul.categories__list').on('click', 'li:not(.categories__item_active)', 
@@ -135,3 +144,71 @@ catalog.addEventListener('click', () => {
         item.classList.toggle('show');
     });
 });
+
+// Goods touch effect 
+
+const touch = document.querySelectorAll('.goods__descr'),
+      goodsItem = document.querySelectorAll('.goods__item');
+
+goodsItem.forEach((item) => {
+    item.addEventListener('touchstart', (e) => {
+        if (e.target === goodsItem) {
+            touch.forEach((i) => {
+                i.classList.add('goods__descr-touch');
+            });
+        }
+    });
+});
+
+// Server 
+
+const forms = document.querySelectorAll('form');
+
+const message = {
+    loading: "Завантаження",
+    success: "Ми з Вами скоро зв'яжемося",
+    failure: "Халепа! Щось пішло не так..."
+};
+
+forms.forEach(item => {
+    postData(item);
+});
+
+function postData(form) {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const statusMessage = document.createElement('div');
+        statusMessage.classList.add('status');
+        statusMessage.textContent = message.loading;
+        form.append(statusMessage);
+
+        const request = new XMLHttpRequest();
+        request.open('POST', 'server.php');
+
+        request.setRequestHeader('Content-type', 'application/json');
+        const formData = new FormData(form);
+
+        const object = {};
+        formData.forEach(function(value, key) {
+            object[key] = value;
+        });
+
+        const json = JSON.stringify(object);
+
+        request.send(json);
+
+        request.addEventListener('load', () => {
+            if(request.status === 200) {
+                console.log(request.response);
+                statusMessage.textContent = message.success;
+                form.reset();
+                setTimeout(() => {
+                    statusMessage.remove();
+                }, 2000);
+            } else {
+                statusMessage.textContent = message.failure;
+            }
+        });
+    });
+}

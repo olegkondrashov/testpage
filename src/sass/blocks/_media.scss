@@ -47,7 +47,7 @@
     .questions {
         &__form {
             width: 35%;
-            height: 70%;
+            height: 75%;
             &-content {
                 padding: 50px 20px 15px 20px;
             }
@@ -391,7 +391,7 @@
     .questions {
         &__form {
             top: 100px;
-            height: 55%;
+            height: 60%;
             font-size: 10px;
             &-title {
                 font-size: 20px;
@@ -434,6 +434,36 @@
 }
 
 @media (max-width: 768px) {
+    .slider {
+        &__descr {
+            display: block;
+            font-size: 18px;
+        }
+        &__title {
+            font-size: 36px;
+        }
+    }
+    .goods {
+        flex-wrap: wrap;
+        margin-top: 30px;
+        &__item {
+            margin-bottom: 50px;
+        }
+        &__price {
+            flex-direction: column;
+        }
+    }
+    .button {
+        &__goods {
+            margin: 0 auto;
+        }
+        &__call {
+            width: 60%;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 679px) {
     .header {
         &__social {
             margin: 0;
@@ -467,7 +497,48 @@
             }
         }
     }
+    .main {
+        &__wrapper {
+            left: 0;
+            max-width: 50%;
+            padding: 5px 10px 0px;
+        }
+        &__slider {
+            &_text {
+                &-title {
+                    font-size: 14px;
+                }
+                &-subtitle {
+                    font-size: 12px;
+                }
+                &-descr {
+                    display: none;
+                }
+            }
+            &-nums {
+                display: none;
+            }
+        }
+        &__btn {
+            width: 100%;
+            font-size: 12px;
+            padding-top: 3px;
+        }
+    }
+    .advantages {
+        margin-top: 30px;
+        .slider {
+            &__descr {
+                display: block;
+                font-size: 12px;
+            }
+            &__title {
+                font-size: 30px;
+            }
+        }
+    }
     .catalog {
+        margin-top: 30px;
         &__btn {
             width: max-content;
         }
@@ -494,6 +565,80 @@
         &__btn {
             width: max-content;
             font-size: 10px;
+        }
+    }
+    .categories {
+        margin-top: 30px;
+        &__list {
+            margin-top: 30px;
+            padding-left: 0;
+        }
+        &__item {
+            font-size: 10px;
+            height: 70px;
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    .about {
+        margin-top: 30px;
+        &__text {
+            top: 0px;
+            max-height: 80%;
+            max-width: 100%;
+        }
+    }
+    .questions {
+        margin-top: 30px;
+        &__form {
+            width: 100%;
+            &-title {
+                font-size: 12px;
+            }
+            &-input {
+                height: 45px;
+            }
+        }
+    }
+    .footer {
+        margin-top: 0;
+        &__photo {
+            display: none;
+        }
+        &__content {
+            width: 100%;
+        }
+        &__logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &_wrapper {
+                margin: 20px auto;
+            }
+        }
+        &__social {
+            svg {
+                width: 35px;
+            }
+        }
+    }
+    .modal {
+        &__dialog {
+            top: 50px;
+            width: 90vw;
+        }
+        &__title {
+            padding: 0 30px;
+        }
+    }
+    .button {
+        &__call {
+            font-size: 15px;
+        }
+        &__goods {
+            margin: 10px auto;
         }
     }
 }
